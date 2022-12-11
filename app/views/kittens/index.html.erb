@@ -5,4 +5,10 @@
   <%= render 'details', kitten: kitten%>
 <% end %>
 
-<%= link_to  'New Kitten', new_kitten_path%>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= link_to  'New Kitten', new_kitten_path %>

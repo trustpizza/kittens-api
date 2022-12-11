@@ -4,3 +4,11 @@
   <%= render 'form', f: f%>
   <%= submit_tag 'Add Kitten' %>
 <% end %>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= link_to "Home", root_url%>
