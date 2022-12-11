@@ -36,6 +36,7 @@ class KittensController < ApplicationController
     else
       flash[:error] = 'Could not update kitten'
       render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -44,6 +45,6 @@ class KittensController < ApplicationController
   private
 
   def kitten_params
-    require(params).include(:name, :age, :cuteness, :softness)
+    require(params).permit(:name, :age, :cuteness, :softness)
   end
 end
