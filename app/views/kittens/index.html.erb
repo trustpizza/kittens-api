@@ -3,6 +3,7 @@
 <% @kittens.each do |kitten| %>
   <h3> Name: <%= kitten.name %> </h3>
   <%= render 'details', kitten: kitten%>
+  <%= link_to 'Delete', kitten_path(kitten), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
 <% end %>
 
 <% flash.each do |type, msg| %>

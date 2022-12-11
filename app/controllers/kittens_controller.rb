@@ -24,6 +24,7 @@ class KittensController < ApplicationController
   end
 
   def destroy
+    @kitten = Kitten.find(params[:id])
     @kitten.destroy
     flash[:success] = 'Kitten Destroyed'
     redirect_to root_path
