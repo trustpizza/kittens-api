@@ -1,1 +1,15 @@
-<%= @kitten %>
+<h1> <%= @kitten.name  %> </h1>
+
+<%= form_with model: @kitten do |f| %>
+  <%= render 'form', f: f %>
+  <%= submit_tag 'Edit Kitten' %>
+<% end %>
+
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= params %>

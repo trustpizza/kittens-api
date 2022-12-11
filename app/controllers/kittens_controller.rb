@@ -31,6 +31,7 @@ class KittensController < ApplicationController
   end
 
   def update
+    @kitten = Kitten.find(params[:id])
     if @kitten.update(kitten_params)
       flash[:success] = 'Kitten updated'
       redirect_to @kitten
@@ -41,6 +42,7 @@ class KittensController < ApplicationController
   end
 
   def edit
+    @kitten = Kitten.find(params[:id])
   end
 
   private
