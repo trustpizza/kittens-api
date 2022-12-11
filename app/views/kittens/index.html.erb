@@ -5,7 +5,8 @@
   <%= render 'details', kitten: kitten%>
   <%= link_to 'Delete', kitten_path(kitten), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
   <br>
-  <%= link_to 'Edit', edit_kitten_path(kitten), method: :edit %>
+  <%= link_to 'Edit', edit_kitten_path(kitten), method: :edit %> <br>
+  <%= link_to 'Show', kitten_path(kitten), method: :get %>
 <% end %>
 
 <% flash.each do |type, msg| %>
