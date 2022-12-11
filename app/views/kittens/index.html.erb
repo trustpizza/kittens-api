@@ -1,0 +1,6 @@
+<h1>All Kittens </h1>
+
+<% @kittens.each do |kitten| %>
+  <h3> Name: <%= kitten.name %> </h3>
+  <%= render 'details', kitten: kitten%>
+<% end %>
